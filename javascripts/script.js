@@ -35,13 +35,13 @@ function daniel() {
         var i = 1;
         setInterval(function() {
             var oldPhoto = jQuery(".photo");
-            TweenMax.to(oldPhoto, DURATION, {left: "-100%"}, 0.1);
+            TweenMax.to(oldPhoto, DURATION, {left: "-100%"}, DURATION);
             setTimeout(function() {
                 oldPhoto.remove();
-            }, 1000 * 1.1 * DURATION);
+            }, 1000 * 2 * DURATION);
             var photo = jQuery("<img/>", {class: "photo", src: permPhotos[i]});
             photo.appendTo(body);
-            TweenMax.from(photo, DURATION, {left: "100%"}, 0.1);
+            TweenMax.from(photo, DURATION, {left: "100%"}, DURATION);
             ++i;
             i %= permPhotos.length;
         }, 1000 * INTERVAL);
