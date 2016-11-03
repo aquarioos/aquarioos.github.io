@@ -5,8 +5,13 @@ const EXTRA_EASE = Bounce.easeOut;
 const ITEMS = [
     {html: "<i>...Daniel</i>", top: "100px", onclick: "daniel()"}
 ];
-const DANIEL_PHOTOS = ["photos/bg1.jpg", "photos/bg2.jpg", "photos/jg1.jpg", "photos/jg2.jpg", "photos/jg3.jpg",
-        "photos/zf1.jpg"];
+    photos: ["photos/bg1.jpg", "photos/bg2.jpg", "photos/jg1.jpg", "photos/jg2.jpg", "photos/jg3.jpg",
+            "photos/zf1.jpg"],
+const DANIEL = [
+    {
+        "pl":
+    }
+]
 
 function permutations(array) {
     var newArray = [];
