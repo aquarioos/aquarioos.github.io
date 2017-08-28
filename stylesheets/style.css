@@ -1,86 +1,67 @@
-/*
-COLORS:
-    tori's eye:
-    #005A31 - ciemny zielony
-    #A8CD1B - jasny zielony
-    #CBE32D - najjaśniejszy zielony
-    #F3FAB6 - prawie biały zielony
-    event finds:
-    #558C89 - zielony-morski-ciemny
-    #74AFAD - zielony-morski-jasny
-    #D9853B - pomaranczowy
-    #ECECEA - szary
-    w3
-    #EAECE5 - rgb(234, 236, 229) - prawie biały
-    #B2C2BF - rgb(178, 194, 191) - szaro-błękitny
-    #C0DED9 - rgb(192, 222, 217) - błękitny
-    #3B3A30 - prawie czarny
-*/
-
 * {
     margin: 0;
-}
-
-body {
-    background-color: #EAECE5;
-    font-family: sans-serif;
-    margin: 0;
     padding: 0;
-    margin-top: 0;
-    color: #3B3A30;
+    font-family: sans-serif;
 }
 
-header {
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 64px;
-    color: #3B3A30;
-    background-color: rgba(234, 236, 229, 0.5);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
-header h2 {
-    font-size: 32px;
+h1 {
+    font-size: 100px;
     font-weight: 100;
 }
 
-menu {
+.font-black, .font-white {
+    transition: 2s;
+    transition-delay: 2s;
+    transition-timing-function: ease-in;
+}
+
+.font-black {
+    color: rgba(0, 0, 0, 0);
+}
+
+.font-white {
+    color: rgba(255, 255, 255, 1);
+}
+
+.bg-black {
+    background-color: #000;
+}
+
+.bg-white {
+    background-color: #FFF;
+}
+
+.middle-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 50%;
+    justify-content: center;
 }
 
-a {
-    text-decoration: none;
-    color: #3B3A30;
-    transition: 0.5s;
-}
-a:hover {
-    color: #B2C2BF;
-}
-
-section {
-    margin-top: 64px;
-    margin-bottom: 64px;
-    min-height: calc(100vh - 64px);
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+.bg-image img, .bg-image-blurred img {
+    position: fixed;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
 }
 
-section h3 {
-    text-align: center;
-    padding-top: 96px;
-    padding-bottom: 64px;
-    background-color: rgba(234, 236, 229, 0.7);
+.bg-image-blurred img {
+    filter: blur(2px) opacity(0.5);
+    transition: 1s;
+    transition-delay: 1s;
+}
+
+@media all and (orientation: portrait) {
+    .background-image img {
+        height: calc(100vh + 10px);
+    }
+}
+
+@media all and (orientation: landscape) {
+    .background-image img {
+        width: calc(100vw + 10px);
+    }
 }
