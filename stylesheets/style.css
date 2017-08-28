@@ -7,6 +7,7 @@
 h1 {
     font-size: 100px;
     font-weight: 100;
+    padding-top: 5vh;
 }
 
 .font-black, .font-white {
@@ -33,7 +34,10 @@ h1 {
 
 .middle-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .bg-image img, .bg-image-blurred img {
@@ -49,7 +53,7 @@ h1 {
 }
 
 .bg-image-blurred img {
-    filter: blur(2px) opacity(0.5);
+    filter: contrast(0.5) opacity(0.75);
     transition: 1s;
     transition-delay: 1s;
 }
@@ -64,4 +68,18 @@ h1 {
     .background-image img {
         width: calc(100vw + 10px);
     }
+}
+
+#toggle-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #000000 50%, #FFFFFF 50%);
+    cursor: pointer;
+    transition: 0.5s;
+    margin-bottom: 5vh;
+}
+
+#toggle-button:hover {
+    filter: invert(1);
 }
