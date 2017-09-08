@@ -9,10 +9,10 @@ function initialAnimation() {
   var initialTimeline = new TimelineLite();
   initialTimeline.add(
     TweenLite.from('#bg-image img', 2,
-      {'min-height': '120vh', 'min-width': '120vw', ease: Bounce.easeOut})
+      {'min-height': '200vh', 'min-width': '200vw', ease: Bounce.easeOut})
   );
   initialTimeline.add(
-    TweenLite.to('#bg-image', 0.2, {delay: 0.5, opacity: 0.5, contrast: 0.75})
+    TweenLite.to('#bg-image', 0.5, {delay: 0.5, opacity: 0.5, contrast: 0.75})
   );
   // initialTimeline.add(
   //   TweenLite.to(
@@ -20,14 +20,14 @@ function initialAnimation() {
   //     {opacity: 1}
   //   )
   // );
-  initialTimeline.add(
-    TweenLite.to('#name-surname', 1, {opacity: 1})
-  );
+  // initialTimeline.add(
+  //   TweenLite.to('#name-surname', 1, {opacity: 1})
+  // );
 
   for (chr of 'Daniel TARANTA') {
     initialTimeline.add(
       TweenLite.delayedCall(
-        0.05, addLetter, [document.getElementById('name-surname'), chr]
+        0.1, addLetter, [document.getElementById('name-surname'), chr]
       )
     );
   }
