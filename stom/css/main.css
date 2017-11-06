@@ -98,8 +98,9 @@ section.table {
 }
 
 section.table table {
-    /*margin-top: 25px;*/
+    margin: 20px 0;
     border-collapse: collapse;
+    width: 100%;
 }
 
 section.table thead tr {
