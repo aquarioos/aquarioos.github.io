@@ -1,48 +1,52 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% load static %}
-
-{% block content %}
-
-    <script type="text/javascript">
-        function toggleAside() {
-            var aside = document.getElementsByTagName('aside')[0];
-            var hamburger = document.getElementById('hamburger');
-            var curtain = document.getElementById('curtain');
-            if (aside.className.includes('hidden')) {
-                aside.className = aside.className.replace('hidden', 'shown');
-                hamburger.className = hamburger.className.replace('hidden', 'shown');
-                curtain.className = curtain.className.replace('hidden', 'shown');
-            } else {
-                aside.className = aside.className.replace('shown', 'hidden');
-                hamburger.className = hamburger.className.replace('shown', 'hidden');
-                curtain.className = curtain.className.replace('shown', 'hidden');
-            }
-        }
-    </script>
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"/>
+    <title></title>
+    <link rel="stylesheet" href='css/style.css'>
+    <link rel="stylesheet" href='css/aside.css'>
+    <link rel="stylesheet" href='css/main.css'>
+    <!-- <link rel="stylesheet" href='/static/css/sections.css'> -->
+    <!-- <link rel="stylesheet" href='/static/css/sea.css'> -->
+    <script type="text/javascript" src='js/script.js'></script>
+</head>
+<body class="sea_light wide loading">
     <aside class="hidden">
-        <header></header>
+        <header>
+            <h2>Przychodnia stomatologiczna</h2>
+            <p>ul. Bryły 6/123<br>01-012 Warszawa</p>
+            <a class="phone" href="tel://48225556677">+48 22 555 66 77</a>
+        </header>
         <nav>
-            {% for name, url in nav %}
-            {% if url == '' %}
-            <a href="/{{ url }}" class="first"><img src="{% static 'img/logo.png' %}"></a>
-            {% else %}
-            <a href="/{{ url }}">{{ name }}</a>
-            {% endif %}
-            {% endfor %}
+            <a href="index.html" class="first"><img src="img/logo.png"></a>
+            <a href="about.html">O nas</a>
+            <a href="empl.html">Pracownicy</a>
+            <a href="offer.html">Usługi</a>
+            <a href="hour.html">Godziny przyjęć</a>
         </nav>
-        <footer></footer>
+        <footer>
+            <p>Bla bla bla, coopyrights</p>
+        </footer>
     </aside>
-    <div id="hamburger" class="hidden" onclick="toggleAside()">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+    
+    <div id="hamburger_container">
+        <div id="hamburger" class="shown" onclick="showAside()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
     </div>
-    <div id="curtain" class="hidden"></div>
+
+    <div id="curtain" class="hidden" onclick="hideAside()"></div>
 
     <div id="main">
-        <header></header>
+        <header>
+            <h2>Przychodnia stomatologiczna</h2>
+            <p>ul. Bryły 6/123<br>01-012 Warszawa</p>
+            <a class="phone" href="tel://48225556677">+48 22 555 66 77</a>
+        </header>
         <section class="table loading">
             <div class="title">Usługi</div>
             <table>
@@ -136,7 +140,11 @@
                 </tbody>
             </table>
         </section>
-        <footer></footer>
+        <footer>
+            <p>Bla bla bla, coopyrights</p>
+        </footer>
     </div>
 
-{% endblock %}
+
+</body>
+</html>
