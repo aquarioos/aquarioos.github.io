@@ -111,7 +111,7 @@ section.table tbody tr.even {
 }
 section.table td, section.table th {
     line-height: 40px;
-    padding: 0 25px;
+    padding: 0 15px;
 }
 
 @media screen and (max-width: 439px) {
