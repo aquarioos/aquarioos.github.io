@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"/>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href='{% static "css/style.css" %}'>
+    <link rel="stylesheet" href='{% static "css/aside.css" %}'>
+    <link rel="stylesheet" href='{% static "css/main.css" %}'>
+    <!-- <link rel="stylesheet" href='{% static "css/sections.css" %}'> -->
+    <!-- <link rel="stylesheet" href='{% static "css/sea.css" %}'> -->
+    <script type="text/javascript" src='{% static "js/script.js" %}'></script>
+</head>
+<body class="sea_light wide loading">
+{% block content %}
+{% endblock %}
+</body>
+<!-- <footer>© 2017 <a target="_blank" href="http://taranta.pl">Aquarioos</a></footer> -->
+</html>

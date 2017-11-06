@@ -1,0 +1,146 @@
+/*
+default colors:
+rgba(0, 102, 102, 1)
+*/
+
+body {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#main {
+}
+
+@media screen and (min-width: 1100px) {
+    #main {
+        width: calc(100% - 400px);
+    }
+}
+@media screen and (min-width: 450px) and (max-width: 1099px) {
+    #main {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 449px) {
+    #main {
+        width: 100%;
+    }
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+section.size_half {
+    min-height: calc(50vh - 50px);
+}
+section.size_full {
+    min-height: calc(100vh - 50px);
+}
+section.size_auto {
+    min-height: 0;
+}
+section .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+section .title {
+    color: rgba(0, 102, 102, 1);
+    font-size: 48px;
+    margin: 20px;
+}
+section .subtitle {
+    font-size: 24px;
+    margin: 20px;
+}
+section .content .column {
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+}
+
+section .column img {
+    margin: 20px;
+    width: calc(100% - 40px);
+    height: auto;
+}
+.hor_center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+    /*height: 50px;*/
+}
+section .column p {
+    margin: 20px;
+    text-align: justify;
+}
+
+section .column a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 102, 102, 0.7);
+    transition: 0.5s;
+    line-height: 50px;
+    padding: 0 25px;
+}
+section .column a:hover {
+    background-color: rgba(0, 102, 102, 1);
+}
+
+section.table {
+    justify-content: space-around;
+}
+
+section.table table {
+    /*margin-top: 25px;*/
+    border-collapse: collapse;
+}
+
+section.table thead tr {
+    background-color: rgba(0, 102, 102, 1);
+    color: rgba(255, 255, 255, 1);
+}
+section.table tbody tr.even {
+    background-color: rgba(0, 102, 102, 0.2);
+}
+section.table td, section.table th {
+    line-height: 40px;
+    padding: 0 50px;
+}
+
+@media screen and (max-width: 439px) {
+    section {
+        margin: 40px 0;
+    }
+    section .content {
+        flex-direction: column;
+    }
+    section .mobile_reversed {
+        flex-direction: column-reverse;
+    }
+    section.size_half {
+        min-height: 0;
+    }
+    section.size_full {
+        min-height: 0;
+    }
+    section.size_auto {
+        min-height: 0;
+    }
+
+    section .column img {
+        width: 100%;
+        max-height: 300px;
+        margin: 10px 0;
+        object-fit: contain;
+    }
+    section .column p, section .column .subtitle, section .column a, section .title {
+        margin: 5px 10px;
+    }
+}

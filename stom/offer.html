@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+    <script type="text/javascript">
+        function toggleAside() {
+            var aside = document.getElementsByTagName('aside')[0];
+            var hamburger = document.getElementById('hamburger');
+            var curtain = document.getElementById('curtain');
+            if (aside.className.includes('hidden')) {
+                aside.className = aside.className.replace('hidden', 'shown');
+                hamburger.className = hamburger.className.replace('hidden', 'shown');
+                curtain.className = curtain.className.replace('hidden', 'shown');
+            } else {
+                aside.className = aside.className.replace('shown', 'hidden');
+                hamburger.className = hamburger.className.replace('shown', 'hidden');
+                curtain.className = curtain.className.replace('shown', 'hidden');
+            }
+        }
+    </script>
+
+    <aside class="hidden">
+        <header></header>
+        <nav>
+            {% for name, url in nav %}
+            {% if url == '' %}
+            <a href="/{{ url }}" class="first"><img src="{% static 'img/logo.png' %}"></a>
+            {% else %}
+            <a href="/{{ url }}">{{ name }}</a>
+            {% endif %}
+            {% endfor %}
+        </nav>
+        <footer></footer>
+    </aside>
+    <div id="hamburger" class="hidden" onclick="toggleAside()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <div id="curtain" class="hidden"></div>
+
+    <div id="main">
+        <header></header>
+        <section class="table loading">
+            <div class="title">Usługi</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>usługa</th>
+                        <th>cena</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Wyrywanie zęba</td>
+                        <td>200 zł</td>
+                    </tr>
+                    <tr class="even">
+                        <td>Borowanie zęba</td>
+                        <td>100 zł</td>
+                    </tr>
+                    <tr>
+                        <td>Czyszczenie zęba</td>
+                        <td>150 zł</td>
+                    </tr>
+                    <tr class="even">
+                        <td>Malowanie zęba</td>
+                        <td>50 zł</td>
+                    </tr>
+                    <tr>
+                        <td>Piłowanie zęba</td>
+                        <td>100 zł</td>
+                    </tr>
+                    <tr class="even">
+                        <td>Wyrywanie zęba</td>
+                        <td>200 zł</td>
+                    </tr>
+                    <tr>
+                        <td>Borowanie zęba</td>
+                        <td>100 zł</td>
+                    </tr>
+                    <tr class="even">
+                        <td>Czyszczenie zęba</td>
+                        <td>150 zł</td>
+                    </tr>
+                    <tr>
+                        <td>Malowanie zęba</td>
+                        <td>50 zł</td>
+                    </tr>
+                    <tr class="even">
+                        <td>Piłowanie zęba</td>
+                        <td>100 zł</td>
+                    </tr>
+                    <tr>
+                        <td>Wyrywanie zęba</td>
+                        <td>200 zł</td>
+                    </tr>
+                    <tr class="even">
+                        <td>Borowanie zęba</td>
+                        <td>100 zł</td>
+                    </tr>
+                    <tr>
+                        <td>Czyszczenie zęba</td>
+                        <td>150 zł</td>
+                    </tr>
+                    <tr class="even">
+                        <td>Malowanie zęba</td>
+                        <td>50 zł</td>
+                    </tr>
+                    <tr>
+                        <td>Piłowanie zęba</td>
+                        <td>100 zł</td>
+                    </tr>
+                    <tr class="even">
+                        <td>Wyrywanie zęba</td>
+                        <td>200 zł</td>
+                    </tr>
+                    <tr>
+                        <td>Borowanie zęba</td>
+                        <td>100 zł</td>
+                    </tr>
+                    <tr class="even">
+                        <td>Czyszczenie zęba</td>
+                        <td>150 zł</td>
+                    </tr>
+                    <tr>
+                        <td>Malowanie zęba</td>
+                        <td>50 zł</td>
+                    </tr>
+                    <tr class="even">
+                        <td>Piłowanie zęba</td>
+                        <td>100 zł</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <footer></footer>
+    </div>
+
+{% endblock %}
