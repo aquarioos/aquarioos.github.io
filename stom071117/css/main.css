@@ -1,0 +1,153 @@
+/*
+default colors:
+rgba(0, 102, 102, 1)
+*/
+
+body {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#main {
+}
+section {
+    max-width: 1000px;
+}
+
+@media screen and (min-width: 1100px) {
+    #main {
+        width: calc(100% - 400px);
+    }
+}
+@media screen and (min-width: 450px) and (max-width: 1099px) {
+    #main {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 449px) {
+    #main {
+        width: 100%;
+    }
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+section.size_half {
+    min-height: calc(50vh - 50px);
+}
+section.size_full {
+    min-height: calc(100vh - 50px);
+}
+section.size_auto {
+    min-height: 0;
+}
+section .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+section .title {
+    color: rgba(0, 102, 102, 1);
+    font-size: 48px;
+    margin: 20px;
+}
+section .subtitle {
+    font-size: 24px;
+    margin: 20px;
+}
+section .content .column {
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+}
+
+section .column img {
+    margin: 20px;
+    width: calc(100% - 40px);
+    height: auto;
+}
+.hor_center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+}
+section .column p {
+    margin: 20px;
+    text-align: justify;
+}
+
+section .column a {
+    border: solid 1px rgba(0, 102, 102, 1);
+    text-decoration: none;
+    color: rgba(0, 102, 102, 1);
+    transition: 0.5s;
+    padding: 10px 25px;
+    margin: 10px;
+}
+section .column a:hover {
+    border: solid 1px rgba(0, 102, 102, 0.5);
+}
+
+section.table {
+    justify-content: space-around;
+}
+
+section.table table {
+    margin: 20px 0;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+section.table thead tr {
+    background-color: rgba(0, 102, 102, 1);
+    color: rgba(255, 255, 255, 1);
+}
+section.table tbody tr.even {
+    background-color: rgba(0, 102, 102, 0.2);
+}
+section.table td, section.table th {
+    line-height: 40px;
+    padding: 0 15px;
+}
+
+@media screen and (max-width: 439px) {
+    section {
+        margin: 70px 0 20px 0;
+    }
+    section .content {
+        flex-direction: column;
+    }
+    section .mobile_reversed {
+        flex-direction: column-reverse;
+    }
+    section.size_half {
+        min-height: 0;
+    }
+    section.size_full {
+        min-height: 0;
+    }
+    section.size_auto {
+        min-height: 0;
+    }
+
+    section .title {
+        font-size: 28px;
+    }
+
+    section .column img {
+        width: 100%;
+        max-height: 300px;
+        margin: 10px 0;
+        object-fit: contain;
+    }
+    section .column p, section .column .subtitle, section .column a, section .title {
+        margin: 5px 10px;
+    }
+}
