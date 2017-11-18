@@ -114,6 +114,27 @@ section .row .price .act {
     font-size: 1.2em;
 }
 
+/*GALLERY*/
+
+section .gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+section .gallery .photo {
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    /*TODO*/
+    /*background-*/
+}
+
+section .gallery .photo {
+    width: 200px;
+    height: 200px;
+}
+
 @media screen and (max-width: 1099px) {
     #main {
         margin: 0;
