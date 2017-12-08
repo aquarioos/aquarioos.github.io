@@ -1,10 +1,28 @@
 #main {
     display: flex;
     flex-direction: column;
-    margin: 20px 20px 20px 300px;
-    border-style: solid;
-    border-width:  1px 0;
-    border-color: rgba(0, 102, 102, 1);
+    margin-left: 300px;
+}
+#main.offset {
+    margin-top: 64vh;
+}
+
+header {
+    /* width: 100%; */
+    /* background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+img.bg {
+    width: 100%;
+    height: 64vh;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 section {
@@ -12,14 +30,14 @@ section {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 40px;
+    background-color: #ffffff;
 }
 
 section .title {
-    font-size: 4em;
-    font-family: serif;
-    margin: 10px 20px;
-    color: rgba(0, 102, 102, 1);
+    font-size: 3rem;
+    font-weight: bold;
+    color: #004444;
+    margin: 16px;
 }
 
 section .content {
@@ -34,18 +52,20 @@ section .content .column {
     align-items: center;
 }
 
+section .content .column.narrow {
+    min-width: 36%;
+}
+section .content .column.wide {
+    min-width: 64%;
+}
+
 section .content .column .subtitle {
-    font-family: serif;
-    width: calc(100% - 40px);
-    margin: 10px 20px;
-    font-size: 2em;
-    color: rgba(0, 102, 102, 1);
-    font-style: italic;
+    font-size: 2rem;
+    margin: 8px;
 }
 
 section .content .column img {
-    width: calc(100% - 40px);
-    margin: 10px 20px;
+    width: 100%;
     height: auto;
 }
 
@@ -54,19 +74,21 @@ section .content .column p {
     padding: 0;
     font-size: 1em;
     line-height: 1.5em;
-    margin: 10px 20px;
+    margin: 16px;
 }
 
 section .content .column a {
-    border: solid 2px rgba(0, 102, 102, 1);
+    border: solid 2px #004444;
     text-decoration: none;
-    color: rgba(0, 102, 102, 1);
-    transition: 0.5s;
-    padding: 10px 25px;
-    margin: 10px 20px;
+    color: #004444;
+    padding: 16px 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 8px;
 }
 section .content .column a:hover {
-    border: solid 2px rgba(0, 102, 102, 0.5);
+    background-color: #004444;
+    color: #FFFFFF;
 }
 
 section .header {
@@ -112,6 +134,27 @@ section .row .price .old {
 }
 section .row .price .act {
     font-size: 1.2em;
+}
+
+/*GALLERY*/
+
+section .gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+section .gallery .photo {
+    width: 200px;
+    height: 200px;
+    background-position: center;
+    /*TODO*/
+    /*background-*/
+}
+
+section .gallery .photo {
+    width: 200px;
+    height: 200px;
 }
 
 @media screen and (max-width: 1099px) {
