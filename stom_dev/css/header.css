@@ -1,0 +1,11 @@
+header {
+    background-color: #AAFFDD;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    height: 100px;
+}

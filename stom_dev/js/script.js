@@ -1,3 +1,11 @@
+function showFullLogo() {
+    console.log('showFullLogo');
+    var logoName = document.getElementById('logo_name');
+    console.log(logoName);
+    TweenLite.fromTo(logoName, 2, {opacity: 0}, {opacity: 1});
+    console.log(TweenLite.fromTo);
+}
+
 function getVPHeight() {
     return window.innerHeight;
 }

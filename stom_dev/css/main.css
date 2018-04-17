@@ -1,7 +1,8 @@
 #main {
     display: flex;
     flex-direction: column;
-    margin-left: 300px;
+    align-items: center;
+    margin-left: 250px;
 }
 #main.offset {
     margin-top: 64vh;
@@ -33,11 +34,13 @@ section {
     background-color: #ffffff;
 }
 
-section .title {
+.title {
     font-size: 3rem;
     font-weight: bold;
     color: #004444;
-    margin: 16px;
+    height: 100px;
+    display: flex;
+    align-items: center;
 }
 
 section .content {
@@ -96,8 +99,14 @@ section .header {
     padding: 10px;
     background-color: rgb(0, 102, 102);
     color: rgb(255, 255, 255);
+}
+section .header h1,
+section .header h2,
+section .header h3,
+section .header h4,
+section .header h5,
+section .header h6 {
     text-align: center;
-    font-size: 2em;
 }
 
 section .row {
