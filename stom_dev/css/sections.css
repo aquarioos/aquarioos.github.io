@@ -88,6 +88,11 @@ section.first img {
         height: 200px;
     }
 }
+@media screen and (max-width: 400px) {
+    section.first img {
+        height: 100px;
+    }
+}
 
 section.white-on-black {
     background-blend-mode: darken;
