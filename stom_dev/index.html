@@ -5,103 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"/>
     <link rel="stylesheet" href="css/style.css">
-    <!--<link rel="stylesheet" href="css/aside.css">-->
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/hamburger.css">
-    <!-- <link rel="stylesheet" href="css/about.css"> -->
     <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/table.css">
     <script type="text/javascript" src="js/greensock-js/TweenLite.js"></script>
+    <script type="text/javascript" src="js/greensock-js/TimelineLite.js"></script>
     <script type="text/javascript" src="js/greensock-js/plugins/CSSPlugin.js"></script>
     <script type="text/javascript" src="js/greensock-js/easing/EasePack.js"></script>
     <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
 </head>
 
 <body>
 
-<script>
-    window.onload = function () {
-        TweenLite.delayedCall(0.2, function () {
-            TweenLite.to("nav", 0.8, {opacity: 1, ease: Power2.easeOut});
-        });
-        TweenLite.delayedCall(0.1, function () {
-            TweenLite.to("#first", 0.4, {opacity: 1, ease: Power2.easeOut});
-        });
-
-        TweenLite.delayedCall(0.5, function () {
-            TweenLite.to("#logo_tooth", 1.5, {opacity: 1, ease: Power2.easeOut});
-        });
-        TweenLite.delayedCall(0.5, function () {
-            TweenLite.to("#logo_name", 2.5, {opacity: 1, ease: Power2.easeIn});
-        });
-        TweenLite.delayedCall(1, function () {
-            TweenLite.to("#first_adress", 2, {opacity: 1, ease: Power2.easeIn});
-        });
-        TweenLite.delayedCall(1, function () {
-            TweenLite.to("#logo_border", 2, {'border-color': 'rgba(255, 255, 255, 1)', ease: Power2.easeIn});
-        });
-    };
-
-    function smoothScroll(id) {
-        $('html, body').animate({
-            scrollTop: $('#' + id).offset().top
-        }, 500);
-    }
-
-    function showNav() {
-        TweenLite.to('#curtain', 0.2, {left: 0});
-        TweenLite.delayedCall(0.3, function () {
-            TweenLite.to("nav", 0.4, {left: 0, ease: Power2.easeIn});
-        });
-    }
-
-    function hideNav() {
-        TweenLite.to("nav", 0.2, {left: '-200px', ease: Power2.easeIn});
-        TweenLite.delayedCall(0.3, function () {
-            TweenLite.to('#curtain', 0.4, {left: '100vh'});
-        });
-    }
-    // TweenLite.to(document.getElementById('logo_name'), 1, {opacity: 1});
-</script>
-
-<!--<aside class="hidden">-->
-<!--<div class="logo">-->
-<!--<a href="index.html">-->
-<!--<img src="img/logo_txt.png">-->
-<!--</a>-->
-<!--</div>-->
-<!--<div class="contact">-->
-<!--<div class="adress">-->
-<!--<a target="_blank" href="https://www.openstreetmap.org/#map=17/52.18025/21.01427">-->
-<!--ul. Bryły 123/123<br>01-234 Warszawa-->
-<!--</a>-->
-<!--</div>-->
-<!--<div class="phone">-->
-<!--<a href="tel://48225556677">+48 22 555 66 77</a>-->
-<!--</div>-->
-<!--</div>-->
-<!--</aside>-->
+<script src="js/script.js"></script>
 
 <nav style="opacity: 0;">
     <p onclick="smoothScroll('first');">Początek</p>
-    <p onclick="smoothScroll('about')">O nas</p>
-    <p onclick="smoothScroll('doctors')">Lekarze</p>
+    <p onclick="smoothScroll('about');">O nas</p>
+    <p onclick="smoothScroll('offer');">Usługi</p>
+    <p onclick="smoothScroll('doctors');">Lekarze</p>
+    <p onclick="smoothScroll('hours');">Godziny</p>
     <!--<a href="offer.html">Usługi</a>-->
-    <!--<a href="hour.html">Godziny przyjęć</a>-->
+    <!--<a href="#hours">Godziny</a>-->
     <!--<a href="index.html">Kontakt</a>-->
 </nav>
 
 <div id="hamburger_container">
-    <!--<div class="logo">-->
-    <!--<a href="index.html">-->
-    <!--<img src="img/logo_txt_wide_sea.png">-->
-    <!--</a>-->
-    <!--</div>-->
     <div id="hamburger" class="shown" onclick="showNav();">
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
     </div>
+    <a href="#first"><img src="img/logo_tooth.png"></a>
 </div>
 <div id="curtain" class="hidden" onclick="hideNav();"></div>
 
@@ -120,7 +56,70 @@
     </section>
 
     <section id="about" class="text">
-        <p>Zapraszamy Państwa do naszej przychodni Bryły&nbsp;6, gdzie świadczymy specjalistyczną i&nbsp;kompleksową opiekę stomatologiczną, a&nbsp;także usługi z&nbsp;zakresu medycyny estetycznej. Doskonale wiemy, jak ważny jest piękny i&nbsp;zdrowy uśmiech, dlatego dokładamy wszelkich starań, aby pacjenci opuszczali przychodnię z&nbsp;pełną satysfakcją – zarówno z&nbsp;efektów leczniczych jak i&nbsp;estetycznych. Dbamy o&nbsp;to, aby każdemu kto odwiedzi naszą przychodnię już od momentu rejestracji towarzyszyła życzliwa i&nbsp;przyjazna atmosfera. Do tej pory zaufało nam ponad 27&nbsp;tysięcy pacjentów. Wśród nich całe rodziny - od ich najstarszych, aż po tych najmłodszych członków. Każdy z&nbsp;naszych pacjentów może mieć pewność , że&nbsp;leczenie będzie indywidualnie dobrane do jego potrzeb, kompleksowe i&nbsp;skuteczne.</p>
+        <p>Zapraszamy Państwa do naszej przychodni Bryły&nbsp;6, gdzie świadczymy specjalistyczną i&nbsp;kompleksową
+            opiekę stomatologiczną, a&nbsp;także usługi z&nbsp;zakresu medycyny estetycznej. Doskonale wiemy, jak ważny
+            jest piękny i&nbsp;zdrowy uśmiech, dlatego dokładamy wszelkich starań, aby pacjenci opuszczali przychodnię z&nbsp;pełną
+            satysfakcją – zarówno z&nbsp;efektów leczniczych jak i&nbsp;estetycznych. Dbamy o&nbsp;to, aby każdemu kto
+            odwiedzi naszą przychodnię już od momentu rejestracji towarzyszyła życzliwa i&nbsp;przyjazna atmosfera. Do
+            tej pory zaufało nam ponad 27&nbsp;tysięcy pacjentów. Wśród nich całe rodziny - od ich najstarszych, aż po
+            tych najmłodszych członków. Każdy z&nbsp;naszych pacjentów może mieć pewność , że&nbsp;leczenie będzie
+            indywidualnie dobrane do jego potrzeb, kompleksowe i&nbsp;skuteczne.</p>
+    </section>
+
+    <section id="offer" class="nested-list black-on-white">
+        <h1>Zakres oferowanych przez nas usług z zakresu stomatologii obejmuje:</h1>
+        <ul>
+            <li>
+                <strong>Leczenie zachowawcze</strong><br>
+                Dbanie o to, aby zachować zęby w naturalnym kształcie i kolorze, dzieki profilaktyce oraz zabiegom takim jak wypełnianie ubytków.
+            </li>
+            <li>
+                <strong>Leczenie endodontyczne</strong><br>
+                Powszechnie znane jako leczenie kanałowe. Ma za zadanie rozpoznanie oraz leczenie chorób miazgi oraz tkanek okołowierzchołkowych.
+            </li>
+            <li>
+                <strong>Leczenię chirurgiczne:</strong><br>
+                Leczenie operacyjne jamy ustnej oraz okolic przyległych.
+                <ul>
+                    <li>usuwanie zębów</li>
+                    <li>usuwanie zębów zatrzymanych</li>
+                    <li>usuwanie torbieli oraz zmian w kości wraz z histopatologicznym badaniem</li>
+                    <li>resekcje zębów</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Leczenie implantologiczne i zabiegi augamentacyjne kości</strong><br>
+                Najbardziej innowacyjna metoda odbudowy brakujących zębów.
+            </li>
+            <li>
+                <strong>Leczenie protetyczne</strong><br>
+                Mające na celu uzupełnianie braków zębowych, oraz poprawianie niedoskonałości w kształcie zębów.
+                <ul>
+                    <li>korony i mosty porcelanowe</li>
+                    <li>korony i mosty pełnoceramiczne</li>
+                    <li>licówki</li>
+                    <li>protezy osiadające, szkieletowe, elastyczne</li>
+                    <li>prace kombinowane (zatrzaski, teleskopy)</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Leczenie periodontologiczne</strong><br>
+                Leczenie chorób tkanek wokół zęba – dziąseł i kości.
+                <ul>
+                    <li>leczenie choroby przyzębia</li>
+                    <li>zabiegi regeneracyjne na tkankach przyzębia</li>
+                    <li>pokrywanie recesji</li>
+                    <li>leczenie chorób błony śluzowej</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Leczenie bruksizmu:</strong>
+                <ul>
+                    <li>szyny relaksacyjne</li>
+                    <li>lpodawanie toksyny botulinowej w mięśnie żwacze</li>
+                </ul>
+            </li>
+        </ul>
     </section>
 
     <section id="doctors" class="text solid-bg">
@@ -165,8 +164,91 @@
         </div>
     </section>
 
+    <section id="hours" class="black-on-white">
+        <table class="desktop">
+            <thead>
+                <tr>
+                    <th>poniedziałek</th>
+                    <th>wtorek</th>
+                    <th>środa</th>
+                    <th>czwartek</th>
+                    <th>piątek</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td class="name" colspan="5">lek. dentysta <b>Anna Grzegorczyk-Jaźwińska</b></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>10<sup>00</sup> - 13<sup>00</sup></td>
+                    <td></td>
+                    <td>10<sup>00</sup> - 13<sup>00</sup></td>
+                    <td>15<sup>30</sup> - 19<sup>15</sup></td>
+                </tr>
+
+                <tr>
+                    <td class="name" colspan="5">lek. dentysta <b>Maciej Nowak</b></td>
+                </tr>
+                <tr>
+                    <td>16<sup>00</sup> - 20<sup>00</sup></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>10<sup>00</sup> - 13<sup>30</sup></td>
+                </tr>
+
+                <tr>
+                    <td class="name" colspan="5">lek. dentysta <b>Bartosz Pawłowski</b></td>
+                </tr>
+                <tr>
+                    <td>9<sup>00</sup> - 13<sup>00</sup></td>
+                    <td>9<sup>00</sup> - 12<sup>00</sup></td>
+                    <td>9<sup>00</sup> - 11<sup>00</sup></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td class="name" colspan="5">lek. dentysta <b>Agnieszka Suchodolska</b></td>
+                </tr>
+                <tr>
+                    <td>9<sup>00</sup> - 12<sup>30</sup></td>
+                    <td>14<sup>00</sup> - 19<sup>00</sup></td>
+                    <td>14<sup>00</sup> - 19<sup>00</sup></td>
+                    <td>9<sup>00</sup> - 12<sup>30</sup></td>
+                    <td>9<sup>00</sup> - 12<sup>30</sup></td>
+                </tr>
+
+                <tr>
+                    <td class="name" colspan="5">lek. dentysta <b>Beata Marcinkowska</b></td>
+                </tr>
+                <tr>
+                    <td>9<sup>00</sup> - 13<sup>30</sup></td>
+                    <td>14<sup>00</sup> - 19<sup>30</sup></td>
+                    <td>14<sup>00</sup> - 19<sup>30</sup></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td class="name" colspan="5">lek. dentysta <b>Katarzyna Kessler-Furman</b></td>
+                </tr>
+                <tr>
+                    <td>15<sup>00</sup> - 18<sup>30</sup></td>
+                    <td></td>
+                    <td></td>
+                    <td>10<sup>00</sup> - 13<sup>00</sup></td>
+                    <td>15<sup>00</sup> - 18<sup>30</sup></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </section>
+
     <!--<footer>-->
-        <!--<div class="copyrights">copyrights &copy; 2017</div>-->
+    <!--<div class="copyrights">copyrights &copy; 2017</div>-->
     <!--</footer>-->
 
 </div>
