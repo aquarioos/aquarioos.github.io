@@ -13,14 +13,15 @@ body {
 
 section {
     width: calc(100% - 100px);
-    min-height: calc(100vh - 150px);
+    /*min-height: calc(100vh - 150px);*/
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 1.2em;
     line-height: 1.8em;
-    padding: 50px;
+    padding: 0 50px;
     /* background */
     background-position: center;
     background-attachment: fixed;
@@ -29,14 +30,22 @@ section {
 }
 
 section.first {
-    /*background-color: #046;*/
+    background-color: #044;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: calc(100vh - 100px);
+    margin: 50px 0;
 }
 
 section.text {
+    color: #FFFFFF;
+    text-shadow: 0 0 0.2em #000;
+}
+
+section.solid-bg {
+    background-color: #044;
 }
 
 section.first .img-container {
@@ -82,13 +91,13 @@ section.first img {
 
 section.white-on-black {
     background-blend-mode: darken;
-    background-color: rgba(0, 0, 0, 0.4);
+    /*background-color: rgba(0, 0, 0, 0.4);*/
     color: #FFFFFF;
     text-shadow: 0 0 0.4em #000;
 }
 section.black-on-white {
     background-blend-mode: lighten;
-    background-color: rgba(255, 255, 255, 0.4);
+    /*background-color: rgba(255, 255, 255, 0.4);*/
     color: #000000;
     text-shadow: 0 0 0.4em #FFF;
 }
@@ -96,6 +105,65 @@ section.black-on-white {
 section.text p {
     text-align: justify;
     max-width: 640px;
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.table .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+    transition: 0.4s;
+    width: 100%;
+}
+.table .row:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+}
+.table .row .cell {
+    padding: 10px 20px 0 20px;
+    font-weight: lighter;
+}
+
+#phone {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    section.first {
+        width: calc(100% - 50px);
+        min-height: calc(100vh - 50px);
+        margin: 0;
+        padding: 25px;
+    }
+    section {
+        width: calc(100% - 50px);
+        min-height: auto;
+        margin: 0;
+        padding: 100px 25px 150px 25px;
+    }
+    #phone {
+        display: block;
+        position: fixed;
+        z-index: 1;
+        background-color: rgba(0, 200, 250, 0.5);
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        bottom: 50px;
+        right: 50px;
+        cursor: pointer;
+    }
+    #phone img {
+        width: 100px;
+        height: 100px;
+    }
 }
 
 /*section {*/

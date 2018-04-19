@@ -7,6 +7,27 @@
 #content {
     margin-left: 250px;
 }
+
+img#bg {
+    position: fixed;
+    width: calc(100% - 250px);
+    height: 100vh;
+    top: 0;
+    left: 250px;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+
+@media only screen and (max-width: 768px) {
+    #content {
+        margin-left: 0;
+    }
+    img#bg {
+        width: 100%;
+        left: 0;
+    }
+}
 /*@media screen and (max-width: 1099px) {*/
     /*#content {*/
         /*margin-left: 0;*/

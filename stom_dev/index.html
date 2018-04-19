@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="css/style.css">
     <!--<link rel="stylesheet" href="css/aside.css">-->
     <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/hamburger.css">
     <!-- <link rel="stylesheet" href="css/about.css"> -->
     <link rel="stylesheet" href="css/sections.css">
     <script type="text/javascript" src="js/greensock-js/TweenLite.js"></script>
     <script type="text/javascript" src="js/greensock-js/plugins/CSSPlugin.js"></script>
     <script type="text/javascript" src="js/greensock-js/easing/EasePack.js"></script>
     <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </head>
 
 <body>
@@ -21,6 +23,9 @@
     window.onload = function () {
         TweenLite.delayedCall(0.2, function () {
             TweenLite.to("nav", 0.8, {opacity: 1, ease: Power2.easeOut});
+        });
+        TweenLite.delayedCall(0.1, function () {
+            TweenLite.to("#first", 0.4, {opacity: 1, ease: Power2.easeOut});
         });
 
         TweenLite.delayedCall(0.5, function () {
@@ -41,6 +46,20 @@
         $('html, body').animate({
             scrollTop: $('#' + id).offset().top
         }, 500);
+    }
+
+    function showNav() {
+        TweenLite.to('#curtain', 0.2, {left: 0});
+        TweenLite.delayedCall(0.3, function () {
+            TweenLite.to("nav", 0.4, {left: 0, ease: Power2.easeIn});
+        });
+    }
+
+    function hideNav() {
+        TweenLite.to("nav", 0.2, {left: '-300px', ease: Power2.easeIn});
+        TweenLite.delayedCall(0.3, function () {
+            TweenLite.to('#curtain', 0.4, {left: '100vh'});
+        });
     }
     // TweenLite.to(document.getElementById('logo_name'), 1, {opacity: 1});
 </script>
@@ -78,17 +97,21 @@
     <!--<img src="img/logo_txt_wide_sea.png">-->
     <!--</a>-->
     <!--</div>-->
-    <div id="hamburger" class="shown" onclick="showAside()">
+    <div id="hamburger" class="shown" onclick="showNav();">
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
     </div>
 </div>
-<div id="curtain" class="hidden" onclick="hideAside()"></div>
+<div id="curtain" class="hidden" onclick="hideNav();"></div>
+
+<a href="tel://48225556677" id="phone"><img src="img/phone.png"></a>
 
 <div id="content">
 
-    <section id="first" class="first">
+    <img id="bg" src="img/poczekalnia.jpg">
+
+    <section id="first" class="first" style="opacity: 0;">
         <div id="logo_border" class="img-container" style="border-color: rgba(255, 255, 255, 0);">
             <img id="logo_tooth" src="img/logo_tooth.png" style="opacity: 0;">
             <img id="logo_name" src="img/logo_name.png" style="opacity: 0;">
@@ -96,25 +119,55 @@
         <p id="first_adress" class="adress clickable" style="opacity: 0;">Stefana Bryły 6, 02-685 Warszawa</p>
     </section>
 
-    <section id="about" class="text white-on-black" style="background-image: url(img/poczekalnia.jpg)">
+    <section id="about" class="text">
         <p>Zapraszamy Państwa do naszej przychodni Bryły&nbsp;6, gdzie świadczymy specjalistyczną i&nbsp;kompleksową opiekę stomatologiczną, a&nbsp;także usługi z&nbsp;zakresu medycyny estetycznej. Doskonale wiemy, jak ważny jest piękny i&nbsp;zdrowy uśmiech, dlatego dokładamy wszelkich starań, aby pacjenci opuszczali przychodnię z&nbsp;pełną satysfakcją – zarówno z&nbsp;efektów leczniczych jak i&nbsp;estetycznych. Dbamy o&nbsp;to, aby każdemu kto odwiedzi naszą przychodnię już od momentu rejestracji towarzyszyła życzliwa i&nbsp;przyjazna atmosfera. Do tej pory zaufało nam ponad 27&nbsp;tysięcy pacjentów. Wśród nich całe rodziny - od ich najstarszych, aż po tych najmłodszych członków. Każdy z&nbsp;naszych pacjentów może mieć pewność , że&nbsp;leczenie będzie indywidualnie dobrane do jego potrzeb, kompleksowe i&nbsp;skuteczne.</p>
     </section>
 
-    <section id="doctors" class="text black-on-white" style="background-image: url(img/dentist_tools.jpg)">
+    <section id="doctors" class="text solid-bg">
         <h1>Lista pracowników medycznych</h1>
-        <ul>
-            <li>asdasdsad</li>
-            <li>asdasdsad</li>
-            <li>asdasdsad</li>
-            <li>asdasdsad</li>
-            <li>asdasdsad</li>
-        </ul>
-        <p>Zapraszamy Państwa do naszej przychodni Bryły&nbsp;6, gdzie świadczymy specjalistyczną i&nbsp;kompleksową opiekę stomatologiczną, a&nbsp;także usługi z&nbsp;zakresu medycyny estetycznej. Doskonale wiemy, jak ważny jest piękny i&nbsp;zdrowy uśmiech, dlatego dokładamy wszelkich starań, aby pacjenci opuszczali przychodnię z&nbsp;pełną satysfakcją – zarówno z&nbsp;efektów leczniczych jak i&nbsp;estetycznych. Dbamy o&nbsp;to, aby każdemu kto odwiedzi naszą przychodnię już od momentu rejestracji towarzyszyła życzliwa i&nbsp;przyjazna atmosfera. Do tej pory zaufało nam ponad 27&nbsp;tysięcy pacjentów. Wśród nich całe rodziny - od ich najstarszych, aż po tych najmłodszych członków. Każdy z&nbsp;naszych pacjentów może mieć pewność , że&nbsp;leczenie będzie indywidualnie dobrane do jego potrzeb, kompleksowe i&nbsp;skuteczne.</p>
+        <div class="table">
+            <div class="row">
+                <div class="cell"><i>pracownik</i></div>
+                <div class="cell"><i>nr prawa wyk. zaw.</i></div>
+            </div>
+            <div class="row">
+                <div class="cell">lek. dentysta <b>Ewa Bliska</b></div>
+                <div class="cell">8190993</div>
+            </div>
+            <div class="row">
+                <div class="cell">lek. dentysta <b>Joanna Gołębiowska</b></div>
+                <div class="cell">9450858</div>
+            </div>
+            <div class="row">
+                <div class="cell">lek. dentysta <b>Hanna Gruszczyńska-Korba</b></div>
+                <div class="cell">1758832</div>
+            </div>
+            <div class="row">
+                <div class="cell">lek. dentysta <b>Anna Grzegorczyk-Jaźwińska</b></div>
+                <div class="cell">6760382</div>
+            </div>
+            <div class="row">
+                <div class="cell">lek. dentysta <b>Marek Hołubowicz</b></div>
+                <div class="cell">3167357</div>
+            </div>
+            <div class="row">
+                <div class="cell">lek. dentysta <b>Tadeusz Kazimierczak</b></div>
+                <div class="cell">6890600</div>
+            </div>
+            <div class="row">
+                <div class="cell">lek. dentysta <b>Katarzyna Kessler-Furman</b></div>
+                <div class="cell">1601212</div>
+            </div>
+            <div class="row">
+                <div class="cell">lek. dentysta <b>Małgorzata Kicka</b></div>
+                <div class="cell">3301586</div>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <div class="copyrights">copyrights &copy; 2017</div>
-    </footer>
+    <!--<footer>-->
+        <!--<div class="copyrights">copyrights &copy; 2017</div>-->
+    <!--</footer>-->
 
 </div>
 </body>
