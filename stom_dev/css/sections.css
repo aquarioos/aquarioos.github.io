@@ -90,7 +90,7 @@ section.first img {
 }
 @media screen and (max-width: 400px) {
     section.first img {
-        height: 100px;
+        height: 80px;
     }
 }
 
