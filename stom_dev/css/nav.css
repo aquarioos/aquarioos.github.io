@@ -37,8 +37,8 @@ nav a:hover, nav p:hover {
 
 @media only screen and (max-width: 768px) {
     nav {
-        width: 300px;
-        left: -300px;
+        width: 200px;
+        left: -200px;
         justify-content: flex-start;
     }
 }

@@ -147,6 +147,7 @@ section.text p {
         min-height: auto;
         margin: 0;
         padding: 100px 25px;
+        font-size: 0.9rem;
     }
     #phone {
         display: block;
@@ -156,13 +157,16 @@ section.text p {
         width: 70px;
         height: 70px;
         border-radius: 30px;
-        bottom: 30px;
-        right: 30px;
+        bottom: 20px;
+        right: 20px;
         cursor: pointer;
     }
     #phone img {
         width: 70px;
         height: 70px;
+    }
+    section.first img {
+        height: 150px;
     }
 }
 
