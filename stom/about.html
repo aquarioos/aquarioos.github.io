@@ -7,7 +7,8 @@
     <title></title>
     <link rel="stylesheet" href='css/style.css'>
     <link rel="stylesheet" href='css/aside.css'>
-    <link rel="stylesheet" href='css/main.css'>
+    <link rel="stylesheet" href='css/about.css'>
+    <link rel="stylesheet" href='css/gallery.css'>
     <script type="text/javascript" src='js/script.js'></script>
 </head>
 <body class="sea_light wide loading">
@@ -19,14 +20,14 @@
             </a>
         </div>
         <nav>
+            <a href="index.html">Strona główna</a>
             <a href="about.html">O nas</a>
-            <a href="empl.html">Pracownicy</a>
             <a href="offer.html">Usługi</a>
             <a href="hour.html">Godziny przyjęć</a>
-            <a href="index.html">Galeria</a>
+            <a href="gallery.html">Galeria</a>
             <a href="index.html">Kontakt</a>
         </nav>
-        <footer>
+        <div class="contact">
             <div class="adress">
                 <a target="_blank" href="https://www.openstreetmap.org/#map=17/52.18025/21.01427">
                     ul. Bryły 123/123<br>01-234 Warszawa
@@ -35,10 +36,8 @@
             <div class="phone">
                 <a href="tel://48225556677">+48 22 555 66 77</a>
             </div>
-            <div class="copyrights">copyrights &copy; 2017</div>
-        </footer>
+        </div>
     </aside>
-
     <div id="hamburger_container">
         <div class="logo">
             <a href="index.html">
@@ -53,99 +52,110 @@
     </div>
     <div id="curtain" class="hidden" onclick="hideAside()"></div>
 
-    <div id="main">
-        
-        <section class="size_auto first loading">
-            
-            <div class="title">O nas</div>
-            
-            
-            <div class="content">
-            
-                
-                <div class="column">
-                    
-                    
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    
-                    
-                    
-                    <div class="hor_center">
-                        
-                    </div>
-                </div>
-                
-                
-                <div class="column">
-                    
-                    <img src="img/dental_office.jpg">
-                    
-                    <div class="hor_center">
-                        
-                    </div>
-                </div>
-                
-            </div>
-        </section>
-        
-        <section class="size_auto loading">
-            
-            <div class="title">O nas...</div>
-            
-            
-            <div class="content">
-            
-                
-                <div class="column">
-                    <div class="subtitle">...ciąg dalszy</div>
-                    
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <img src="img/dental_office.jpg">
-                    <div class="hor_center">
-                        
-                    </div>
-                </div>
-                
-                
-            </div>
-        </section>
-        
-        <section class="size_auto loading">
-            
-            <div class="title">na koniec</div>
-            
-            
-            <div class="content mobile_reversed">
-                
-                <div class="column">
-                    
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <img src="img/dental_office.jpg">
-                    <div class="hor_center">
-                        
-                    </div>
-                </div>
-                
-                
-            </div>
-        </section>
-        
-        <footer>
-            <div>
-                <div class="adress">
-                    <a target="_blank" href="https://www.openstreetmap.org/#map=17/52.18025/21.01427">
-                        ul. Bryły 123/123<br>01-234 Warszawa
-                    </a>
-                </div>
-                <div class="phone">
-                    <a href="tel://48225556677">+48 22 555 66 77</a>
-                </div>
-            </div>
-            <div class="copyrights">copyrights &copy; 2017</div>
-        </footer>
+    <div id="slideshow" class="hidden">
     </div>
+
+    <div id="content">
+    
+        <img class="bg" src="img/dental_office.jpg">
+
+        <div id="about">
+            <h1>Kilka słów o nas</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <div class="gallery">
+            <div class="item" style="background-image: url(img/photo1.jpg);" onclick="showGallery(1);">
+                <div class="desc">
+                    <h2>dr Anna Kowalska</h2>
+                    <h3>stomatolog</h3>
+                </div>
+            </div>
+        </div>
+
+        <div id="employees">
+            <h1 class="title">Nasi pracownicy</h1>
+            <section>
+                <div class="column narrow">
+                    <img src="img/photo1.jpg">
+                </div>
+                <div class="column wide">
+                    <h2>dr Anna Kowalska</h2>
+                    <h3>stomatolog</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </section>
+            <section>
+                <div class="column narrow">
+                    <img src="img/photo2.jpg">
+                </div>
+                <div class="column wide">
+                    <h2>dr Jan Kowalski</h2>
+                    <h3>chirurg</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+            </section>
+            <section>
+                <div class="column narrow">
+                    <img src="img/photo1.jpg">
+                </div>
+                <div class="column wide">
+                    <h2>dr Janina Nowak</h2>
+                    <h3>stomatolog</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+            </section>
+            <section>
+                <div class="column narrow">
+                    <img src="img/photo1.jpg">
+                </div>
+                <div class="column wide">
+                    <h2>dr Anna Kowalska</h2>
+                    <h3>stomatolog</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </section>
+            <section>
+                <div class="column narrow">
+                    <img src="img/photo2.jpg">
+                </div>
+                <div class="column wide">
+                    <h2>dr Jan Kowalski</h2>
+                    <h3>chirurg</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+            </section>
+            <section>
+                <div class="column narrow">
+                    <img src="img/photo1.jpg">
+                </div>
+                <div class="column wide">
+                    <h2>dr Janina Nowak</h2>
+                    <h3>stomatolog</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </section>
+            <section>
+                <div class="column narrow">
+                    <img src="img/photo2.jpg">
+                </div>
+                <div class="column wide">
+                    <h2>dr Jan Kowalski</h2>
+                    <h3>chirurg</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+        
+    <footer>
+        <p>copyrights &copy; 2017</p>
+    </footer>
 
 </body>
 </html>

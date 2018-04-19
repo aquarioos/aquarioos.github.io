@@ -1,0 +1,62 @@
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    background-color: #fff;
+}
+
+.gallery .item {
+    background-size: cover;
+    background-position: center;
+    width: 240px;
+    height: 320px;
+    margin: 32px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.gallery .item .desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 240px;
+    height: 0;
+    color: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 127, 127, 0.8);
+    transition: 0.4s;
+}
+.gallery .item .desc h2,
+.gallery .item .desc h3 {
+    visibility: collapse;
+}
+
+.gallery .item:hover .desc {
+    visibility: visible;
+    height: 320px;
+    background-color: rgba(0, 127, 127, 0.8);
+    color: rgba(255, 255, 255, 1);
+}
+
+.gallery .item:hover .desc h2,
+.gallery .item:hover .desc h3 {
+    visibility: visible;
+}
+
+#slideshow {
+    position: fixed;
+    top: 0;
+    left: 300px;
+    width: calc(100% - 300px);
+    height: 100vh;
+    overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+    transition: 1s;
+}
+#slideshow.hidden {
+    visibility: collapse;
+}
+#slideshow.hidden {
+    visibility: collapse;
+}
