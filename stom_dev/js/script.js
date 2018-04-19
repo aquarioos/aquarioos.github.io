@@ -27,12 +27,18 @@ function smoothScroll(id) {
 }
 
 function showNav() {
-    TweenLite.to('#curtain', 0.2, {left: 0});
+    TweenLite.to('#curtain', 0.2, {right: 0});
     TweenLite.delayedCall(0, function () {
         TweenLite.to("#hamburger_container", 0.2, {top: -50, ease: Power2.easeIn});
     });
     TweenLite.delayedCall(0.2, function () {
         TweenLite.to("nav", 0.3, {left: 0});
+    });
+    TweenLite.delayedCall(0.2, function () {
+        TweenLite.to("#phone", 0.3, {bottom: '-70px'});
+    });
+    TweenLite.delayedCall(0.2, function () {
+        TweenLite.to("#to-map", 0.3, {bottom: '-70px'});
     });
 }
 
@@ -42,7 +48,13 @@ function hideNav() {
         TweenLite.to("#hamburger_container", 0.2, {top: 0, ease: Power2.easeIn});
     });
     TweenLite.delayedCall(0.2, function () {
-        TweenLite.to('#curtain', 0.3, {left: '100vw'});
+        TweenLite.to('#curtain', 0.3, {right: '-100%'});
+    });
+    TweenLite.delayedCall(0.2, function () {
+        TweenLite.to("#phone", 0.3, {bottom: '10px'});
+    });
+    TweenLite.delayedCall(0.2, function () {
+        TweenLite.to("#to-map", 0.3, {bottom: '10px'});
     });
 }
 
