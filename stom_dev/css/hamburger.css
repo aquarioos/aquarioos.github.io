@@ -18,6 +18,7 @@
     height: 50px;
     margin: 0 10px;
     transition: 0.5s;
+    cursor: pointer;
 }
 #hamburger {
     width: 40px;

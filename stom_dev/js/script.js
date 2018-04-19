@@ -46,6 +46,15 @@ function hideNav() {
     });
 }
 
+var map;
+
+function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: {lng: 52.181093, lat: 21.012212},
+        zoom: 8
+    });
+}
+
 // function showFullLogo() {
 //     console.log('showFullLogo');
 //     var logoName = document.getElementById('logo_name');
