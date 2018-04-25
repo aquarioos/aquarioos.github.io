@@ -14,6 +14,8 @@
     <script type="text/javascript" src="js/greensock-js/plugins/CSSPlugin.js"></script>
     <script type="text/javascript" src="js/greensock-js/easing/EasePack.js"></script>
     <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <!-- data-management -->
+    <script type="text/javascript" src="js/content-management/doctors.js"></script>
 </head>
 
 <body>
@@ -127,45 +129,9 @@
 
     <section id="doctors" class="text solid-bg">
         <h1>Lista pracowników medycznych</h1>
-        <div class="table">
-            <div class="row">
-                <div class="cell"><i>pracownik</i></div>
-                <div class="cell"><i>nr prawa wyk. zaw.</i></div>
-            </div>
-            <div class="row">
-                <div class="cell">lek. dentysta <b>Ewa Bliska</b></div>
-                <div class="cell">8190993</div>
-            </div>
-            <div class="row">
-                <div class="cell">lek. dentysta <b>Joanna Gołębiowska</b></div>
-                <div class="cell">9450858</div>
-            </div>
-            <div class="row">
-                <div class="cell">lek. dentysta <b>Hanna Gruszczyńska-Korba</b></div>
-                <div class="cell">1758832</div>
-            </div>
-            <div class="row">
-                <div class="cell">lek. dentysta <b>Anna Grzegorczyk-Jaźwińska</b></div>
-                <div class="cell">6760382</div>
-            </div>
-            <div class="row">
-                <div class="cell">lek. dentysta <b>Marek Hołubowicz</b></div>
-                <div class="cell">3167357</div>
-            </div>
-            <div class="row">
-                <div class="cell">lek. dentysta <b>Tadeusz Kazimierczak</b></div>
-                <div class="cell">6890600</div>
-            </div>
-            <div class="row">
-                <div class="cell">lek. dentysta <b>Katarzyna Kessler-Furman</b></div>
-                <div class="cell">1601212</div>
-            </div>
-            <div class="row">
-                <div class="cell">lek. dentysta <b>Małgorzata Kicka</b></div>
-                <div class="cell">3301586</div>
-            </div>
-        </div>
+        <div id="doctors-table" class="table"></div>
     </section>
+    <script>loadDoctors()</script>
 
     <section id="hours" class="black-on-white">
         <table class="desktop">
@@ -253,6 +219,7 @@
     <section id="contact">
         <h1>Kontakt</h1>
         <a href="tel://22 857 48 48">+48 22 857 48 48</a>
+        <a href="mailto:przychodnia_bryly@o2.pl">przychodnia_bryly@o2.pl</a>
         <div id="map"></div>
         <script>
             var map;
