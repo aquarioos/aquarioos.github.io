@@ -18,6 +18,20 @@ main {
   color: navy;
   transition-timing-function: ease-in-out;
 }
+main img.profile-photo {
+  display: none;
+  height: 25vw;
+  width: 25vw;
+  margin: 1rem 1rem 3rem 0;
+}
+@media (max-width: 750px) {
+  main {
+    background-image: none;
+  }
+  main img.profile-photo {
+    display: block;
+  }
+}
 main h1 {
   text-align: right;
   margin: 2rem;
@@ -25,13 +39,22 @@ main h1 {
   font-weight: 200;
   transition: 2s;
   opacity: 0%;
-  font-size: 4rem;
+}
+@media (max-width: 750px) {
+  main h1 {
+    margin: 1rem 1rem 3rem 0;
+  }
 }
 main section {
   margin: 2rem;
   transition: 0.4s;
-  width: 25%;
+  width: 50%;
   text-align: left;
+}
+@media (max-width: 750px) {
+  main section {
+    width: calc(100% - 4rem);
+  }
 }
 main section h2 {
   position: relative;
