@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  background-color: gainsboro;
+}
+
+main {
+  background-image: url(../img/bg-opacity80.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 100vh;
+  font-family: Nunito, Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  font-weight: 400;
+  color: navy;
+  transition-timing-function: ease-in-out;
+}
+main h1 {
+  text-align: right;
+  margin: 2rem;
+  font-style: normal;
+  font-weight: 200;
+  transition: 2s;
+  opacity: 0%;
+  font-size: 4rem;
+}
+main section {
+  margin: 2rem;
+  transition: 0.4s;
+  width: 25%;
+  text-align: left;
+}
+main section h2 {
+  position: relative;
+  right: 0;
+  cursor: pointer;
+}
+main section h2:hover {
+  text-decoration: underline;
+}
+main section .items {
+  display: none;
+  margin: 0;
+}
+main section a {
+  color: #446688;
+  text-decoration: none;
+  transition: 0.2s;
+}
+main section a:hover {
+  color: navy;
+}
+
+/*# sourceMappingURL=style.css.map */

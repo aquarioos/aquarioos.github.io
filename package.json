@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "sass": "^1.67.0",
+    "uglify-js": "^3.17.4"
+  },
+  "scripts": {
+    "scss": "sass style/style.scss style/style.css",
+    "uglify": "uglifyjs js/script.js -o js/script.min.js",
+    "compile": "npm run scss & npm run uglify"
+  }
+}
